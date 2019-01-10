@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
 	"log"
 	"os"
 )
@@ -17,4 +19,21 @@ func main() {
 
 	defer file.Close()
 
+	lineCount := 0
+	scanner := bufio.NewScanner(file)
+
+	for scanner.Scan() {
+		line := scanner.Text()
+		if err := scanner.Err(); err != nil {
+			log.Fatalf("Unable to read %q: %s", line, err)
+		}
+
+		if lineCount > lastNAGLine {
+			break
+		} else if lineCount >= firstNAGLine {
+			fmt.Println(line)
+		}
+
+		lineCount++
+	}
 }
