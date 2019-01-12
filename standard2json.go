@@ -24,7 +24,7 @@ func (n NAG) String() string {
 	return fmt.Sprintf("%d\t%s", n.Value, n.Description)
 }
 
-func main() {
+func getStandardNAGList() NAGList {
 	const firstNAGLine = 1398
 	const lastNAGLine = 1537
 
@@ -62,6 +62,11 @@ func main() {
 		lineCount++
 	}
 
+	return nags
+}
+
+func main() {
+	nags := getStandardNAGList()
 	js, err := json.Marshal(nags)
 	if err != nil {
 		log.Fatalf("Unable to marshal %q: %q", nags, err)
