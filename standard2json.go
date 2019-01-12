@@ -18,7 +18,9 @@ type NAG struct {
 }
 
 // NAGList is a slice of NAGs
-type NAGList []NAG
+type NAGList struct {
+	NAGs []NAG `json:"nags"`
+}
 
 func (n NAG) String() string {
 	return fmt.Sprintf("%d\t%s", n.Value, n.Description)
@@ -56,7 +58,7 @@ func getStandardNAGList() NAGList {
 			}
 			description := strings.Join(fields[1:], " ")
 			nag := NAG{value, description}
-			nags = append(nags, nag)
+			nags.NAGs = append(nags.NAGs, nag)
 		}
 
 		lineCount++
