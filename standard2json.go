@@ -15,6 +15,7 @@ import (
 type NAG struct {
 	Value       int    `json:"value"`
 	Description string `json:"description"`
+	Extension   string `json:"extension,omitempty"`
 }
 
 // NAGList is a slice of NAGs
@@ -57,12 +58,23 @@ func getStandardNAGList() NAGList {
 				log.Fatalf("Unable to parse NAG: %s", err)
 			}
 			description := strings.Join(fields[1:], " ")
-			nag := NAG{value, description}
+			nag := NAG{value, description, ""}
 			nags.NAGs = append(nags.NAGs, nag)
 		}
 
 		lineCount++
 	}
+
+	nags.NAGs = append(nags.NAGs, getChessPadExtensions()...)
+
+	return nags
+}
+
+func getChessPadExtensions() []NAG {
+	var nags []NAG
+
+	nags = append(nags, NAG{140, "With the idea...", "ChessPad"})
+	nags = append(nags, NAG{141, "Aimed against...", "ChessPad"})
 
 	return nags
 }
