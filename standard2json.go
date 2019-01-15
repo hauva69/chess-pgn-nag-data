@@ -78,6 +78,7 @@ func getChessPadExtensions() []NAG {
 	nags = append(nags, NAG{142, "Better is...", "ChessPad"})
 	nags = append(nags, NAG{143, "Worse is...", "ChessPad"})
 	nags = append(nags, NAG{144, "Equivalent is...", "ChessPad"})
+	nags = append(nags, NAG{145, "Editorial comment", "ChessPad"})
 
 	return nags
 }
