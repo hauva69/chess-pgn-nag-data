@@ -89,6 +89,17 @@ func getChessPadExtensions() []NAG {
 	nags = append(nags, NAG{242, "Kingside", "ChessPad"})
 	nags = append(nags, NAG{243, "Queenside", "ChessPad"})
 	nags = append(nags, NAG{244, "Weak point", "ChessPad"})
+	nags = append(nags, NAG{245, "Ending", "ChessPad"})
+	nags = append(nags, NAG{246, "Bishop pair", "ChessPad"})
+	nags = append(nags, NAG{247, "Opposite bishops", "ChessPad"})
+	nags = append(nags, NAG{248, "Same bishops", "ChessPad"})
+	nags = append(nags, NAG{249, "Connected pawns", "ChessPad"})
+	nags = append(nags, NAG{250, "Isolated pawns", "ChessPad"})
+	nags = append(nags, NAG{251, "Doubled pawns", "ChessPad"})
+	nags = append(nags, NAG{252, "Passed pawn", "ChessPad"})
+	nags = append(nags, NAG{253, "Pawn majority", "ChessPad"})
+	nags = append(nags, NAG{254, "With", "ChessPad"})
+	nags = append(nags, NAG{255, "Without", "ChessPad"})
 
 	return nags
 }
