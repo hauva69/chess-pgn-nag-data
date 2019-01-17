@@ -83,6 +83,9 @@ func getChessPadExtensions() []NAG {
 	nags = append(nags, NAG{220, "Diagram", "ChessPad"})
 	nags = append(nags, NAG{221, "Diagram (from Black)", "ChessPad"})
 	nags = append(nags, NAG{238, "Space advantage", "ChessPad"})
+	nags = append(nags, NAG{239, "File", "ChessPad"})
+	nags = append(nags, NAG{240, "Diagonal", "ChessPad"})
+	nags = append(nags, NAG{241, "Centre", "ChessPad"})
 
 	return nags
 }
