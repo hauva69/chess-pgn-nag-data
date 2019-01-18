@@ -1,4 +1,5 @@
 all: vet lint test
+	./chess-pgn-nag-data | python -m json.tool > nag.json
 
 build:
 	go build -race
