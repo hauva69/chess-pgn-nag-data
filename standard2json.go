@@ -65,8 +65,6 @@ func getStandardNAGList() NAGList {
 		lineCount++
 	}
 
-	nags.NAGs = append(nags.NAGs, getChessPadExtensions()...)
-
 	return nags
 }
 
@@ -106,6 +104,7 @@ func getChessPadExtensions() []NAG {
 
 func main() {
 	nags := getStandardNAGList()
+	nags.NAGs = append(nags.NAGs, getChessPadExtensions()...)
 	js, err := json.Marshal(nags)
 	if err != nil {
 		log.Fatalf("Unable to marshal %q: %q", nags, err)
