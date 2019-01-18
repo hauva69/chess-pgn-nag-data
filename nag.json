@@ -1,0 +1,695 @@
+{
+    "nags": [
+        {
+            "value": 1,
+            "description": "good move (traditional \"!\")"
+        },
+        {
+            "value": 2,
+            "description": "poor move (traditional \"?\")"
+        },
+        {
+            "value": 3,
+            "description": "very good move (traditional \"!!\")"
+        },
+        {
+            "value": 4,
+            "description": "very poor move (traditional \"??\")"
+        },
+        {
+            "value": 5,
+            "description": "speculative move (traditional \"!?\")"
+        },
+        {
+            "value": 6,
+            "description": "questionable move (traditional \"?!\")"
+        },
+        {
+            "value": 7,
+            "description": "forced move (all others lose quickly)"
+        },
+        {
+            "value": 8,
+            "description": "singular move (no reasonable alternatives)"
+        },
+        {
+            "value": 9,
+            "description": "worst move"
+        },
+        {
+            "value": 10,
+            "description": "drawish position"
+        },
+        {
+            "value": 11,
+            "description": "equal chances, quiet position"
+        },
+        {
+            "value": 12,
+            "description": "equal chances, active position"
+        },
+        {
+            "value": 13,
+            "description": "unclear position"
+        },
+        {
+            "value": 14,
+            "description": "White has a slight advantage"
+        },
+        {
+            "value": 15,
+            "description": "Black has a slight advantage"
+        },
+        {
+            "value": 16,
+            "description": "White has a moderate advantage"
+        },
+        {
+            "value": 17,
+            "description": "Black has a moderate advantage"
+        },
+        {
+            "value": 18,
+            "description": "White has a decisive advantage"
+        },
+        {
+            "value": 19,
+            "description": "Black has a decisive advantage"
+        },
+        {
+            "value": 20,
+            "description": "White has a crushing advantage (Black should resign)"
+        },
+        {
+            "value": 21,
+            "description": "Black has a crushing advantage (White should resign)"
+        },
+        {
+            "value": 22,
+            "description": "White is in zugzwang"
+        },
+        {
+            "value": 23,
+            "description": "Black is in zugzwang"
+        },
+        {
+            "value": 24,
+            "description": "White has a slight space advantage"
+        },
+        {
+            "value": 25,
+            "description": "Black has a slight space advantage"
+        },
+        {
+            "value": 26,
+            "description": "White has a moderate space advantage"
+        },
+        {
+            "value": 27,
+            "description": "Black has a moderate space advantage"
+        },
+        {
+            "value": 28,
+            "description": "White has a decisive space advantage"
+        },
+        {
+            "value": 29,
+            "description": "Black has a decisive space advantage"
+        },
+        {
+            "value": 30,
+            "description": "White has a slight time (development) advantage"
+        },
+        {
+            "value": 31,
+            "description": "Black has a slight time (development) advantage"
+        },
+        {
+            "value": 32,
+            "description": "White has a moderate time (development) advantage"
+        },
+        {
+            "value": 33,
+            "description": "Black has a moderate time (development) advantage"
+        },
+        {
+            "value": 34,
+            "description": "White has a decisive time (development) advantage"
+        },
+        {
+            "value": 35,
+            "description": "Black has a decisive time (development) advantage"
+        },
+        {
+            "value": 36,
+            "description": "White has the initiative"
+        },
+        {
+            "value": 37,
+            "description": "Black has the initiative"
+        },
+        {
+            "value": 38,
+            "description": "White has a lasting initiative"
+        },
+        {
+            "value": 39,
+            "description": "Black has a lasting initiative"
+        },
+        {
+            "value": 40,
+            "description": "White has the attack"
+        },
+        {
+            "value": 41,
+            "description": "Black has the attack"
+        },
+        {
+            "value": 42,
+            "description": "White has insufficient compensation for material deficit"
+        },
+        {
+            "value": 43,
+            "description": "Black has insufficient compensation for material deficit"
+        },
+        {
+            "value": 44,
+            "description": "White has sufficient compensation for material deficit"
+        },
+        {
+            "value": 45,
+            "description": "Black has sufficient compensation for material deficit"
+        },
+        {
+            "value": 46,
+            "description": "White has more than adequate compensation for material deficit"
+        },
+        {
+            "value": 47,
+            "description": "Black has more than adequate compensation for material deficit"
+        },
+        {
+            "value": 48,
+            "description": "White has a slight center control advantage"
+        },
+        {
+            "value": 49,
+            "description": "Black has a slight center control advantage"
+        },
+        {
+            "value": 50,
+            "description": "White has a moderate center control advantage"
+        },
+        {
+            "value": 51,
+            "description": "Black has a moderate center control advantage"
+        },
+        {
+            "value": 52,
+            "description": "White has a decisive center control advantage"
+        },
+        {
+            "value": 53,
+            "description": "Black has a decisive center control advantage"
+        },
+        {
+            "value": 54,
+            "description": "White has a slight kingside control advantage"
+        },
+        {
+            "value": 55,
+            "description": "Black has a slight kingside control advantage"
+        },
+        {
+            "value": 56,
+            "description": "White has a moderate kingside control advantage"
+        },
+        {
+            "value": 57,
+            "description": "Black has a moderate kingside control advantage"
+        },
+        {
+            "value": 58,
+            "description": "White has a decisive kingside control advantage"
+        },
+        {
+            "value": 59,
+            "description": "Black has a decisive kingside control advantage"
+        },
+        {
+            "value": 60,
+            "description": "White has a slight queenside control advantage"
+        },
+        {
+            "value": 61,
+            "description": "Black has a slight queenside control advantage"
+        },
+        {
+            "value": 62,
+            "description": "White has a moderate queenside control advantage"
+        },
+        {
+            "value": 63,
+            "description": "Black has a moderate queenside control advantage"
+        },
+        {
+            "value": 64,
+            "description": "White has a decisive queenside control advantage"
+        },
+        {
+            "value": 65,
+            "description": "Black has a decisive queenside control advantage"
+        },
+        {
+            "value": 66,
+            "description": "White has a vulnerable first rank"
+        },
+        {
+            "value": 67,
+            "description": "Black has a vulnerable first rank"
+        },
+        {
+            "value": 68,
+            "description": "White has a well protected first rank"
+        },
+        {
+            "value": 69,
+            "description": "Black has a well protected first rank"
+        },
+        {
+            "value": 70,
+            "description": "White has a poorly protected king"
+        },
+        {
+            "value": 71,
+            "description": "Black has a poorly protected king"
+        },
+        {
+            "value": 72,
+            "description": "White has a well protected king"
+        },
+        {
+            "value": 73,
+            "description": "Black has a well protected king"
+        },
+        {
+            "value": 74,
+            "description": "White has a poorly placed king"
+        },
+        {
+            "value": 75,
+            "description": "Black has a poorly placed king"
+        },
+        {
+            "value": 76,
+            "description": "White has a well placed king"
+        },
+        {
+            "value": 77,
+            "description": "Black has a well placed king"
+        },
+        {
+            "value": 78,
+            "description": "White has a very weak pawn structure"
+        },
+        {
+            "value": 79,
+            "description": "Black has a very weak pawn structure"
+        },
+        {
+            "value": 80,
+            "description": "White has a moderately weak pawn structure"
+        },
+        {
+            "value": 81,
+            "description": "Black has a moderately weak pawn structure"
+        },
+        {
+            "value": 82,
+            "description": "White has a moderately strong pawn structure"
+        },
+        {
+            "value": 83,
+            "description": "Black has a moderately strong pawn structure"
+        },
+        {
+            "value": 84,
+            "description": "White has a very strong pawn structure"
+        },
+        {
+            "value": 85,
+            "description": "Black has a very strong pawn structure"
+        },
+        {
+            "value": 86,
+            "description": "White has poor knight placement"
+        },
+        {
+            "value": 87,
+            "description": "Black has poor knight placement"
+        },
+        {
+            "value": 88,
+            "description": "White has good knight placement"
+        },
+        {
+            "value": 89,
+            "description": "Black has good knight placement"
+        },
+        {
+            "value": 90,
+            "description": "White has poor bishop placement"
+        },
+        {
+            "value": 91,
+            "description": "Black has poor bishop placement"
+        },
+        {
+            "value": 92,
+            "description": "White has good bishop placement"
+        },
+        {
+            "value": 93,
+            "description": "Black has good bishop placement"
+        },
+        {
+            "value": 84,
+            "description": "White has poor rook placement"
+        },
+        {
+            "value": 85,
+            "description": "Black has poor rook placement"
+        },
+        {
+            "value": 86,
+            "description": "White has good rook placement"
+        },
+        {
+            "value": 87,
+            "description": "Black has good rook placement"
+        },
+        {
+            "value": 98,
+            "description": "White has poor queen placement"
+        },
+        {
+            "value": 99,
+            "description": "Black has poor queen placement"
+        },
+        {
+            "value": 100,
+            "description": "White has good queen placement"
+        },
+        {
+            "value": 101,
+            "description": "Black has good queen placement"
+        },
+        {
+            "value": 102,
+            "description": "White has poor piece coordination"
+        },
+        {
+            "value": 103,
+            "description": "Black has poor piece coordination"
+        },
+        {
+            "value": 104,
+            "description": "White has good piece coordination"
+        },
+        {
+            "value": 105,
+            "description": "Black has good piece coordination"
+        },
+        {
+            "value": 106,
+            "description": "White has played the opening very poorly"
+        },
+        {
+            "value": 107,
+            "description": "Black has played the opening very poorly"
+        },
+        {
+            "value": 108,
+            "description": "White has played the opening poorly"
+        },
+        {
+            "value": 109,
+            "description": "Black has played the opening poorly"
+        },
+        {
+            "value": 110,
+            "description": "White has played the opening well"
+        },
+        {
+            "value": 111,
+            "description": "Black has played the opening well"
+        },
+        {
+            "value": 112,
+            "description": "White has played the opening very well"
+        },
+        {
+            "value": 113,
+            "description": "Black has played the opening very well"
+        },
+        {
+            "value": 114,
+            "description": "White has played the middlegame very poorly"
+        },
+        {
+            "value": 115,
+            "description": "Black has played the middlegame very poorly"
+        },
+        {
+            "value": 116,
+            "description": "White has played the middlegame poorly"
+        },
+        {
+            "value": 117,
+            "description": "Black has played the middlegame poorly"
+        },
+        {
+            "value": 118,
+            "description": "White has played the middlegame well"
+        },
+        {
+            "value": 119,
+            "description": "Black has played the middlegame well"
+        },
+        {
+            "value": 120,
+            "description": "White has played the middlegame very well"
+        },
+        {
+            "value": 121,
+            "description": "Black has played the middlegame very well"
+        },
+        {
+            "value": 122,
+            "description": "White has played the ending very poorly"
+        },
+        {
+            "value": 123,
+            "description": "Black has played the ending very poorly"
+        },
+        {
+            "value": 124,
+            "description": "White has played the ending poorly"
+        },
+        {
+            "value": 125,
+            "description": "Black has played the ending poorly"
+        },
+        {
+            "value": 126,
+            "description": "White has played the ending well"
+        },
+        {
+            "value": 127,
+            "description": "Black has played the ending well"
+        },
+        {
+            "value": 128,
+            "description": "White has played the ending very well"
+        },
+        {
+            "value": 129,
+            "description": "Black has played the ending very well"
+        },
+        {
+            "value": 130,
+            "description": "White has slight counterplay"
+        },
+        {
+            "value": 131,
+            "description": "Black has slight counterplay"
+        },
+        {
+            "value": 132,
+            "description": "White has moderate counterplay"
+        },
+        {
+            "value": 133,
+            "description": "Black has moderate counterplay"
+        },
+        {
+            "value": 134,
+            "description": "White has decisive counterplay"
+        },
+        {
+            "value": 135,
+            "description": "Black has decisive counterplay"
+        },
+        {
+            "value": 136,
+            "description": "White has moderate time control pressure"
+        },
+        {
+            "value": 137,
+            "description": "Black has moderate time control pressure"
+        },
+        {
+            "value": 138,
+            "description": "White has severe time control pressure"
+        },
+        {
+            "value": 139,
+            "description": "Black has severe time control pressure"
+        },
+        {
+            "value": 140,
+            "description": "With the idea...",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 141,
+            "description": "Aimed against...",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 142,
+            "description": "Better is...",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 143,
+            "description": "Worse is...",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 144,
+            "description": "Equivalent is...",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 145,
+            "description": "Editorial comment",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 146,
+            "description": "Novelty",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 220,
+            "description": "Diagram",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 221,
+            "description": "Diagram (from Black)",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 238,
+            "description": "Space advantage",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 239,
+            "description": "File",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 240,
+            "description": "Diagonal",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 241,
+            "description": "Centre",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 242,
+            "description": "Kingside",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 243,
+            "description": "Queenside",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 244,
+            "description": "Weak point",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 245,
+            "description": "Ending",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 246,
+            "description": "Bishop pair",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 247,
+            "description": "Opposite bishops",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 248,
+            "description": "Same bishops",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 249,
+            "description": "Connected pawns",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 250,
+            "description": "Isolated pawns",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 251,
+            "description": "Doubled pawns",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 252,
+            "description": "Passed pawn",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 253,
+            "description": "Pawn majority",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 254,
+            "description": "With",
+            "extension": "ChessPad"
+        },
+        {
+            "value": 255,
+            "description": "Without",
+            "extension": "ChessPad"
+        }
+    ]
+}
